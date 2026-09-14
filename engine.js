@@ -344,6 +344,12 @@
       bins.style.setProperty('--cols', String(item.bins.length));
       var chips = [], binEls = {};
       var locked = false;
+      /* The authored items are grouped by bin — first three belong left, last
+         three belong right — which makes the answer readable off the order
+         alone. Shuffle the DISPLAY order only: `placed`, `check` and the
+         chip-to-bin mapping all stay keyed by the real item index, so
+         `display[position]` is the one translation anyone has to remember. */
+      var display = shuffle(item.items.map(function (_, i) { return i; }));
 
       function paint() {
         item.bins.forEach(function (b) {
@@ -371,7 +377,8 @@
           });
           if (!any) drop.appendChild(el('span', 'sort-empty', 'tap a word, then this box'));
         });
-        chips.forEach(function (c, i) {
+        chips.forEach(function (c, pos) {
+          var i = display[pos];
           c.classList.toggle('gone', placed[i] != null);
           c.disabled = placed[i] != null || locked;
         });
@@ -382,14 +389,15 @@
         if (!all && done) pool.removeChild(done);
       }
 
-      var picked = -1;
+      var picked = -1;                       /* the real item index, not a position */
       function selectChip(i) {
         picked = picked === i ? -1 : i;
-        chips.forEach(function (c, j) { c.classList.toggle('armed', j === picked); });
+        chips.forEach(function (c, pos) { c.classList.toggle('armed', display[pos] === picked); });
         Object.keys(binEls).forEach(function (k) { binEls[k].classList.toggle('ready', picked >= 0); });
       }
 
-      item.items.forEach(function (it, i) {
+      display.forEach(function (i) {
+        var it = item.items[i];
         var c = el('button', 'chip-i');
         c.type = 'button';
         c.innerHTML = it.text;

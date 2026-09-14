@@ -389,10 +389,14 @@
           it.table.rows.map(function (r) { return '<tr>' + r.map(function (c) { return '<td>' + esc(c) + '</td>'; }).join('') + '</tr>'; }).join('') + '</table>';
       }
       if (it.type === 'spot') h += '<div class="ctx">' + it.words.map(function (w, j) { return esc(w) + '<sub>' + (j + 1) + '</sub>'; }).join(' ') + '</div><div class="ctx">Write the number of the wrong word, and correct it.</div>';
-      if (it.type === 'build') h += '<div class="ctx">Words: ' + it.tiles.map(esc).join(' / ') + '</div><div class="ctx">_______________________________________________</div>';
-      if (it.type === 'order') h += '<ol>' + it.items.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ol><div class="ctx">Write the letters in the correct order: ______</div>';
+      /* Shuffle anything whose authored order IS the answer. On screen the
+         engine does this; on paper it was printing build tiles in solution
+         order, ordering items already in order, and sort words grouped by
+         bin — three free marks. */
+      if (it.type === 'build') h += '<div class="ctx">Words: ' + E.shuffle(it.tiles).map(esc).join(' / ') + '</div><div class="ctx">_______________________________________________</div>';
+      if (it.type === 'order') h += '<ol type="a">' + E.shuffle(it.items).map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ol><div class="ctx">Write the letters in the correct order: ______</div>';
       if (it.type === 'sort') {
-        h += '<div class="ctx">Words: ' + it.items.map(function (x) { return esc(x.text); }).join(' / ') + '</div>' +
+        h += '<div class="ctx">Words: ' + E.shuffle(it.items).map(function (x) { return esc(x.text); }).join(' / ') + '</div>' +
           '<table><tr>' + it.bins.map(function (b) { return '<th>' + esc(b.label) + '</th>'; }).join('') + '</tr>' +
           '<tr>' + it.bins.map(function () { return '<td style="height:44pt"></td>'; }).join('') + '</tr></table>';
       }

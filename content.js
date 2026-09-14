@@ -375,16 +375,16 @@ STAGES.push({
           why: 'The root is the smallest real word inside: <em>comfort</em>. <em>un-</em> and <em>-able</em> are labels attached to it.' },
         { id: 's1l1-02', type: 'sort', tag: 'word-parts', level: 'B1',
           art: 'suitcase',
-          stem: 'Six pieces taken off travel words. Which end of the root did each one come from?',
+          stem: 'Six pieces taken off travel words \u2014 with the hyphens removed. Which end of the root did each one come from?',
           bins: [
             { key: 'pre', label: 'Goes on the front', hint: 'prefix' },
             { key: 'suf', label: 'Goes on the back', hint: 'suffix' }
           ],
           items: [
-            { text: 'un-', bin: 'pre' }, { text: 'trans-', bin: 'pre' }, { text: 'over-', bin: 'pre' },
-            { text: '-ment', bin: 'suf' }, { text: '-able', bin: 'suf' }, { text: '-ness', bin: 'suf' }
+            { text: 'un', bin: 'pre' }, { text: 'trans', bin: 'pre' }, { text: 'over', bin: 'pre' },
+            { text: 'ment', bin: 'suf' }, { text: 'able', bin: 'suf' }, { text: 'ness', bin: 'suf' }
           ],
-          why: 'Prefixes attach before the root, suffixes after it. The hyphen tells you where the root goes: <em>un-</em> waits for something on its right, <em>-ness</em> waits for something on its left.' },
+          why: 'Without the hyphen you have to know the piece itself. The test is to try a root on each side: <em>un</em>+safe works, safe+<em>un</em> does not; kind+<em>ness</em> works, <em>ness</em>+kind does not.' },
         { id: 's1l1-03', type: 'spot', tag: 'word-parts', level: 'B1',
           stem: 'One word in this sentence has no affixes at all — it is a bare root. Click it.',
           words: ['The', 'delayed', 'passengers', 'were', 'given', 'a', 'refund', 'unwillingly.'],
@@ -2505,11 +2505,11 @@ const VERIFY = {
       given: '<em>Unhappy</em> is a noun because it has a prefix.', stem: 'True, false, or impossible to tell?',
       answer: 1, why: 'False. Prefixes do not change class; <em>unhappy</em> is still an adjective.' },
     { id: 'v1-6', type: 'sort', tag: 'word-parts', level: 'B1',
-      stem: 'Front of the root or back of it?',
+      stem: 'The hyphens have been removed. Front of the root, or back of it?',
       bins: [{ key: 'pre', label: 'Front', hint: 'prefix' }, { key: 'suf', label: 'Back', hint: 'suffix' }],
-      items: [{ text: 'dis-', bin: 'pre' }, { text: 'over-', bin: 'pre' }, { text: 'pre-', bin: 'pre' },
-              { text: '-ness', bin: 'suf' }, { text: '-ment', bin: 'suf' }, { text: '-able', bin: 'suf' }],
-      why: 'The hyphen shows which side the root goes on.' },
+      items: [{ text: 'dis', bin: 'pre' }, { text: 'over', bin: 'pre' }, { text: 'pre', bin: 'pre' },
+              { text: 'ness', bin: 'suf' }, { text: 'ment', bin: 'suf' }, { text: 'able', bin: 'suf' }],
+      why: 'Try a root on each side. <em>dis</em>+agree works, agree+<em>dis</em> does not.' },
     { id: 'v1-7', type: 'gap', tag: 'head-right', level: 'B1+',
       lines: [{ who: 'A', text: 'The gap is after "showed real".' }, { who: 'B', text: 'So from <em>kind</em> I need ___.' }],
       options: ['unkind', 'kindly', 'kindness', 'kinder'], answer: 2, why: 'A noun is needed, so a suffix must build it.' }
