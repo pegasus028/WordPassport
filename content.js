@@ -340,7 +340,7 @@ const STAGES = [];
 
 /* ===== GATE 1 — CHECK-IN =============================================== */
 STAGES.push({
-  id: 's1', podcast: '', slides: '', video: '', art: 'desk', n: 1, name: 'Check-in', cefr: 'B1',
+  id: 's1', podcast: 'audio/gate-1.mp3', slides: '', video: '', art: 'desk', n: 1, name: 'Check-in', cefr: 'B1',
   gate: 'Gate 1',
   blurb: 'Before you can build words you have to see that they are built. Three parts, one rule about which end does what, and the first negative prefix that changes its own shape.',
   lessons: [
@@ -556,7 +556,7 @@ STAGES.push({
 
 /* ===== GATE 2 — PASSPORT CONTROL ======================================= */
 STAGES.push({
-  id: 's2', podcast: '', slides: '', video: '', art: 'contract', n: 2, name: 'Passport Control', cefr: 'B1+',
+  id: 's2', podcast: 'audio/gate-2.mp3', slides: '', video: '', art: 'contract', n: 2, name: 'Passport Control', cefr: 'B1+',
   gate: 'Gate 2',
   blurb: 'Four ways to say no, and only three of them are negatives. The difference between refusing, undoing, doing wrongly, and simply labelling.',
   lessons: [
@@ -776,7 +776,7 @@ STAGES.push({
 
 /* ===== GATE 3 — SECURITY =============================================== */
 STAGES.push({
-  id: 's3', podcast: '', slides: '', video: '', art: 'tags', n: 3, name: 'Security', cefr: 'B2',
+  id: 's3', podcast: 'audio/gate-3.mp3', slides: '', video: '', art: 'tags', n: 3, name: 'Security', cefr: 'B2',
   gate: 'Gate 3',
   blurb: 'Prefixes of degree. Too much and too little, above and below, and the one prefix that lets you beat a rival in a single word.',
   lessons: [
@@ -999,7 +999,7 @@ STAGES.push({
 
 /* ===== GATE 4 — DEPARTURE LOUNGE ======================================= */
 STAGES.push({
-  id: 's4', podcast: '', slides: '', video: '', art: 'lounge', n: 4, name: 'Departure Lounge', cefr: 'B2',
+  id: 's4', podcast: 'audio/gate-4.mp3', slides: '', video: '', art: 'lounge', n: 4, name: 'Departure Lounge', cefr: 'B2',
   gate: 'Gate 4',
   blurb: 'Prefixes of time, place and relation — and the first fossils. Some prefixes are still doing their job; some fused into their root centuries ago and stopped.',
   lessons: [
@@ -1221,7 +1221,7 @@ STAGES.push({
 
 /* ===== GATE 5 — BOARDING =============================================== */
 STAGES.push({
-  id: 's5', podcast: '', slides: '', video: '', art: 'board', n: 5, name: 'Boarding', cefr: 'B2',
+  id: 's5', podcast: 'audio/gate-5.mp3', slides: '', video: '', art: 'board', n: 5, name: 'Boarding', cefr: 'B2',
   gate: 'Gate 5',
   blurb: 'The back of the word. Three families of noun suffix — for qualities, for actions, and for people — and why the departures board is made almost entirely out of them.',
   lessons: [
@@ -1452,7 +1452,7 @@ STAGES.push({
 
 /* ===== GATE 6 — IN FLIGHT ============================================== */
 STAGES.push({
-  id: 's6', podcast: '', slides: '', video: '', art: 'nightflight', n: 6, name: 'In Flight', cefr: 'B2+',
+  id: 's6', podcast: 'audio/gate-6.mp3', slides: '', video: '', art: 'nightflight', n: 6, name: 'In Flight', cefr: 'B2+',
   gate: 'Gate 6',
   blurb: 'Adjectives and verbs. The pair that is not quite a pair, the suffix that is secretly passive, and the two or three ways English turns a description into an action.',
   lessons: [
@@ -1666,7 +1666,7 @@ STAGES.push({
 
 /* ===== GATE 7 — TURBULENCE ============================================= */
 STAGES.push({
-  id: 's7', podcast: '', slides: '', video: '', art: 'timetable', n: 7, name: 'Turbulence', cefr: 'C1',
+  id: 's7', podcast: 'audio/gate-7.mp3', slides: '', video: '', art: 'timetable', n: 7, name: 'Turbulence', cefr: 'C1',
   gate: 'Gate 7',
   blurb: 'Where words shake. Some suffixes move the stress, some rewrite the end of the base, and all of them go in a fixed order.',
   lessons: [
@@ -1878,7 +1878,7 @@ STAGES.push({
 
 /* ===== GATE 8 — ARRIVALS =============================================== */
 STAGES.push({
-  id: 's8', podcast: '', slides: '', video: '', art: 'arrivals', n: 8, name: 'Arrivals', cefr: 'C1',
+  id: 's8', podcast: 'audio/gate-8.mp3', slides: '', video: '', art: 'arrivals', n: 8, name: 'Arrivals', cefr: 'C1',
   gate: 'Gate 8',
   blurb: 'Why English works this way at all. Three languages in one, the words that drifted away from their own parts, and how a C1 writer uses a whole word family on purpose.',
   lessons: [
